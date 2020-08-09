@@ -93,6 +93,7 @@ def snake_game():
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_RETURN:
+                        snake_speed = 15
                         snake_game()  # Revisa si se presiona Enter para nuevo juego
                     if event.key == pygame.K_ESCAPE:
                         pygame.quit() # Cerrar ventana juego
