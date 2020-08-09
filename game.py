@@ -58,8 +58,8 @@ def snake_game():
     snake_length = 1
 
     # genera coordenadas x,y random de la comida dentro de la pantalla
-    food_pos_x = round(random.randrange(0, display_width - snake_block) / 10.0) * 10.0
-    food_pos_y = round(random.randrange(0, display_height - snake_block) / 10.0) * 10.0
+    food_pos_x = int(round(random.randrange(0, display_width - snake_block) / 10.0) * 10.0)
+    food_pos_y = int(round(random.randrange(0, display_height - snake_block) / 10.0) * 10.0)
 
     while not game_end:
 
