@@ -72,18 +72,18 @@ def snake_game():
             # Mostrar perdiste al final del juego
             perdiste_font_style = pygame.font.SysFont("comicsansms", 40)
             msg_perdiste = perdiste_font_style.render("Perdiste!", True, game_over_color)
-            game_window.blit(msg_perdiste, [display_width / 6, display_height / 6])  # Dibuja mensaje sobre surface
+            game_window.blit(msg_perdiste, [int(display_width / 6), int(display_height / 6)])  # Dibuja mensaje sobre surface
 
             # Mostrar el puntaje al final de juego
             score = (snake_length - 1) * 10
             score_font_style = pygame.font.SysFont("comicsansms", 35)
             value = score_font_style.render(f"Tu puntaje fue: {str(score)}", True, score_color)
-            game_window.blit(value, [display_width / 6, display_height / 4]) # Dibuja mensaje sobre surface
+            game_window.blit(value, [int(display_width / 6), int(display_height / 4)]) # Dibuja mensaje sobre surface
 
             # Mostrar la opcion nuevo juego
             nuevo_juego_font_style = pygame.font.SysFont("comicsansms", 20)
             msg_nuevo_juego = nuevo_juego_font_style.render("Para jugar nuevamente presiona Enter o ESC para salir..", True, aviso_color)
-            game_window.blit(msg_nuevo_juego, [display_width / 6, display_height / 2]) # Dibuja mensaje sobre surface
+            game_window.blit(msg_nuevo_juego, [int(display_width / 6), int(display_height / 2)]) # Dibuja mensaje sobre surface
 
             # Hace update de pantalla
             pygame.display.update()
