@@ -70,7 +70,7 @@ def snake_game():
             game_window.fill(background_color)
 
             # Mostrar perdiste al final del juego
-            perdiste_font_style = pygame.font.SysFont("comicsansms", 40)
+            perdiste_font_style = pygame.font.SysFont("comicsansms", 35)
             msg_perdiste = perdiste_font_style.render("Perdiste!", True, game_over_color)
             game_window.blit(msg_perdiste, [int(display_width / 6), int(display_height / 6)])  # Dibuja mensaje sobre surface
 
@@ -81,7 +81,7 @@ def snake_game():
             game_window.blit(value, [int(display_width / 6), int(display_height / 4)]) # Dibuja mensaje sobre surface
 
             # Mostrar la opcion nuevo juego
-            nuevo_juego_font_style = pygame.font.SysFont("comicsansms", 20)
+            nuevo_juego_font_style = pygame.font.SysFont("comicsansms", 15)
             msg_nuevo_juego = nuevo_juego_font_style.render("Para jugar nuevamente presiona Enter o ESC para salir..", True, aviso_color)
             game_window.blit(msg_nuevo_juego, [int(display_width / 6), int(display_height / 2)]) # Dibuja mensaje sobre surface
 
@@ -135,7 +135,7 @@ def snake_game():
 
         # Genera superficie y dibuja comida
         game_window.fill(background_color)
-        pygame.draw.rect(game_window, food_color, [food_pos_x, food_pos_y, snake_block, snake_block])
+        pygame.draw.rect(game_window, food_color, [int(food_pos_x), int(food_pos_y), snake_block, snake_block])
 
         # Contador de score
         score = (snake_length - 1) * 10
@@ -152,7 +152,7 @@ def snake_game():
         # Mensaje de velocidad
         velocidad_font_style = pygame.font.SysFont("comicsansms", 20)
         velocidad = score_font_style.render(f"Velocidad {str(snake_speed)}", True, aviso_color)
-        game_window.blit(velocidad, [260, 380])
+        game_window.blit(velocidad, [260, 370])
 
         # Se crea cabeza de snake
         snake_head = [x1, y1]
