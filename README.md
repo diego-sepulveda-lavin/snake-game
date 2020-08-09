@@ -9,8 +9,7 @@ Para poder correr el juego es necesario seguir los siguientes pasos:
 
 ### `Instalar Pygame`
 
-Para instalar Pygame usa el siguiente comando:
-(Usamos --user para instalar en el directorio home y no globalmente)
+Para instalar Pygame usa el siguiente comando:<br>Usamos --user para instalar en el directorio home y no globalmente
 
     python3 -m pip install -U pygame --user
 
@@ -23,4 +22,5 @@ Luego debes clonar el repositorio con el juego:
 ### `Correr el juego`
 
 Ejecutar python o python3:
-    python3 game.py
+
+    python game.py
